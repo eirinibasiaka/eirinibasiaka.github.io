@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sway — Privacy Policy</title>
 <style>
-  :root { --ink: #23201d; --quiet: #6b645d; --cloth: #f4efe8; --line: #e0d8cd; }
+  :root { --ink: #23201d; --quiet: #6b645d; --cloth: #f4efe8; --line: #e0d8cd; --soft: #ece5db; }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --ink: #ece6de; --quiet: #a09890; --cloth: #1b1917; --line: #322e2a; }
+    :root:not([data-theme="light"]) { --ink: #ece6de; --quiet: #a09890; --cloth: #1b1917; --line: #322e2a; --soft: #24211e; }
   }
-  :root[data-theme="dark"] { --ink: #ece6de; --quiet: #a09890; --cloth: #1b1917; --line: #322e2a; }
+  :root[data-theme="dark"] { --ink: #ece6de; --quiet: #a09890; --cloth: #1b1917; --line: #322e2a; --soft: #24211e; }
   * { box-sizing: border-box; }
   body {
     margin: 0; padding: 48px 16px 96px; background: var(--cloth); color: var(--ink);
@@ -17,12 +17,17 @@
   }
   main { max-width: 42rem; margin: 0 auto; }
   h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25em; }
-  h2 { font-size: 1.15rem; margin: 2.25em 0 .5em; }
+  h2 { font-size: 1.2rem; margin: 2.4em 0 .5em; }
+  h3 { font-size: 1rem; margin: 1.6em 0 .3em; }
   .meta { color: var(--quiet); font-size: .9rem; margin: 0 0 2.5em; }
   a { color: inherit; text-underline-offset: 3px; }
   table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 1em 0; }
   th, td { text-align: left; padding: .5em .6em; border-bottom: 1px solid var(--line); vertical-align: top; }
-  th { font-weight: 600; }
+  th { font-weight: 600; white-space: nowrap; }
+  .short { background: var(--soft); border-radius: 6px; padding: 1em 1.2em; margin: 1.5em 0 2em; }
+  .short p { margin: .4em 0; }
+  ul { padding-left: 1.2em; }
+  li { margin: .3em 0; }
   footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--line); color: var(--quiet); font-size: .9rem; }
 </style>
 </head>
@@ -30,78 +35,117 @@
 <main>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Sway: Tilt the Box &middot; last updated 18 September 2026</p>
+<p class="meta">Sway: Tilt the Box, for iPhone &middot; and this website &middot; last updated 18 September 2026</p>
 
-<p>Sway is made by Eirini Basiaka, an individual developer based in Greece. This
-page explains what the game does with information, in plain terms. It is short
-because the game does very little.</p>
+<div class="short">
+  <p><strong>The short version.</strong> The game itself keeps everything on your phone and sends nothing anywhere. The only outside parties are <strong>Google</strong>, which serves the optional rewarded video, and <strong>Apple</strong>, which handles the one purchase. If you buy Remove Ads, the advertising software is never started at all.</p>
+</div>
 
-<h2>What Sway itself collects</h2>
+<h2>Who is responsible</h2>
 
-<p><strong>Nothing that leaves your device.</strong> The game stores which
-levels you have reached and how many attempts you have made, using Apple's
-standard on-device storage, and it keeps a local log of play sessions on the
-device. None of it is uploaded, and there is no account, no login and no server
-of ours to send it to. Deleting the app deletes all of it.</p>
+<p>Sway is made and published by <strong>Eirini Basiaka</strong>, a sole trader based in Greece, who is the controller of any personal data described here.</p>
 
-<h2>What the advertising provider collects</h2>
+<p>Komninis Annis 4, 42100 Trikala, Greece<br>
+<a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a></p>
 
-<p>Sway shows one kind of advertisement: an optional rewarded video you can
-choose to watch in exchange for one extra tilt. You are never required to watch
-one. These come from <strong>Google AdMob</strong>, and Google, as an independent
-controller, may collect:</p>
+<p>Write to that address for anything about your data. There is no separate data protection officer.</p>
+
+<h2>1. What the game keeps on your phone</h2>
+
+<p>Sway has no account, no login and no server of ours. Everything the game itself records stays in the app's own storage on your device, is read only by the game, and is never uploaded:</p>
 
 <table>
-  <tr><th>Identifiers</th><td>Your device's advertising identifier (IDFA) &mdash; only if you allow tracking when iOS asks.</td></tr>
-  <tr><th>Usage data</th><td>Advertising data and interactions with the advertisement.</td></tr>
-  <tr><th>Diagnostics</th><td>Crash, performance and other diagnostic data.</td></tr>
+  <tr><th>Progress</th><td>The level you have reached, how many attempts each level took, and your sound setting.</td></tr>
+  <tr><th>Purchase</th><td>Whether Remove Ads is owned, mirrored from Apple's answer so the game can act on it instantly.</td></tr>
+  <tr><th>Privacy choices</th><td>Your answers to the tracking prompt (kept by iOS) and to the consent form (kept on the device by Google's consent library, in the standard IAB format).</td></tr>
+  <tr><th>Play log</th><td>A local file of play events &mdash; a level started or finished, a tilt made, whether it was blocked, and the times these happened. It contains no identifier of you or your device.</td></tr>
 </table>
 
-<p>Google's own policy governs that data:
-<a href="https://policies.google.com/technologies/partner-sites">How Google uses
-information from sites or apps that use our services</a>.</p>
+<p><strong>Why:</strong> to run the game &mdash; the legal basis is performing our side of the deal with you (GDPR Article 6(1)(b)). <strong>How long:</strong> until you delete the app, which deletes all of it. Nothing here is required from you; the game works if you never enter anything, and you never do.</p>
 
-<h2>Your choices</h2>
+<h2>2. Advertising: Google AdMob</h2>
 
-<p><strong>Tracking.</strong> iOS asks once whether Sway may track you across
-apps and websites. If you decline, the game works exactly the same and the
-advertisements simply become less personalised. You can change the answer at any
-time in <em>Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking</em>.</p>
+<p>Sway shows one kind of advertisement: an optional rewarded video you can choose to watch in exchange for one extra tilt when you are one tilt short of the goal. You are never required to watch one. The videos are served by <strong>Google AdMob</strong>, through the Google Mobile Ads SDK and Google's User Messaging Platform (the consent form), which are part of the app.</p>
 
-<p><strong>Consent in the EEA, the UK and Switzerland.</strong> The first time
-the game is about to show an advertisement, you are asked for consent under the
-GDPR. You can revisit and change that choice at any time from the privacy option
-in the game's settings screen.</p>
+<h3>What Google collects</h3>
 
-<h2>Purchases</h2>
+<p>Google, and the advertising partners it works with, may collect the following through the app, as described in Google's own disclosures:</p>
 
-<p>Sway offers one purchase, which removes advertisements. It is handled
-entirely by Apple. We never see your payment details, and we receive no
-information about you from the transaction beyond whether the purchase is
-active on your device.</p>
+<table>
+  <tr><th>Identifiers</th><td>Your device's advertising identifier (IDFA) &mdash; <strong>only</strong> if you allow tracking when iOS asks. Without that permission the SDK does not receive it.</td></tr>
+  <tr><th>Network</th><td>Your IP address, and an approximate location derived from it, used both to decide which consent rules apply to you and to select advertisements.</td></tr>
+  <tr><th>Device and app</th><td>Device model, operating system version, language, the app's identifier and version.</td></tr>
+  <tr><th>Ad activity</th><td>Which advertisements were requested and shown, whether a video was watched to the end, and whether you tapped it.</td></tr>
+  <tr><th>Diagnostics</th><td>Crash, performance and other diagnostic data about the advertising software.</td></tr>
+</table>
 
-<h2>Children</h2>
+<p><strong>Why:</strong> to select, show and measure the advertisements that fund the free game; to detect fraud and invalid traffic; and, only where you have agreed, to personalise the advertisements to you.</p>
 
-<p>Sway is not directed at children under 13, and we do not knowingly collect
-information from them.</p>
+<p><strong>Legal basis.</strong> If you are in the European Economic Area, the United Kingdom or Switzerland, the consent form appears before the first advertisement. Personalised advertising, and the storing of identifiers for it, rest on your <strong>consent</strong> (Article 6(1)(a)), which you can refuse or withdraw at any time. The limited purposes the form lists as &ldquo;legitimate interest&rdquo; &mdash; showing basic, non-personalised advertisements, measuring them, and keeping the service secure and free of fraud &mdash; rest on our and Google's legitimate interest in funding and protecting a free game (Article 6(1)(f)); the form lets you object to those too. Elsewhere, processing takes place as local law permits, and the tracking prompt still applies.</p>
 
-<h2>Your rights</h2>
+<p><strong>Who receives it.</strong> Google (Google Ireland Limited for users in Europe, Google LLC elsewhere) acts as an independent controller of this data, and its certified advertising partners may receive parts of it to show and measure advertisements. The exact list of partners is shown inside the consent form, and Google publishes it as its <a href="https://support.google.com/admob/answer/9012903">ad technology providers</a>. How Google uses the data is described in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a> and in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>; how long it keeps it, in <a href="https://policies.google.com/technologies/retention">Google's retention practices</a>.</p>
 
-<p>Under the GDPR you may ask what personal data is held about you, and ask for
-it to be corrected or erased. Because Sway holds none of it &mdash; everything the
-game stores stays on your own device &mdash; such a request is answered by pointing
-you to Google for the advertising data described above, or by deleting the app,
-which removes everything the game itself keeps. You are also entitled to lodge a
-complaint with your national data protection authority; in Greece that is the
-Hellenic Data Protection Authority.</p>
+<p><strong>Where it goes.</strong> Google processes data on servers outside the European Economic Area, including in the United States. For those transfers Google relies on the EU&ndash;US Data Privacy Framework and on the European Commission's standard contractual clauses, as described in <a href="https://policies.google.com/privacy/frameworks">Google's data transfer frameworks</a>.</p>
 
-<h2>Changes</h2>
+<p><strong>Ad attribution.</strong> Google may use Apple's SKAdNetwork to learn, in aggregate and without identifying you, that an advertisement led to an app being installed. That mechanism is designed by Apple to work without personal identifiers.</p>
 
-<p>If this policy changes, the date at the top changes with it.</p>
+<p>Every third party named on this page is bound, by its own published policies and by the terms under which it provides its service, to protect your data to at least the standard described here and required by Apple's App Store Review Guidelines.</p>
+
+<h2>3. Purchases: Apple</h2>
+
+<p>Sway offers one purchase, <strong>Remove Ads</strong>, which is handled entirely by Apple through the App Store. Apple processes your payment under its own <a href="https://www.apple.com/legal/privacy/">privacy policy</a>. What we receive from the transaction is whether the purchase is active on your device and a transaction identifier that does not identify you; we never see your name, payment details or Apple ID. The legal basis is the purchase contract itself (Article 6(1)(b)).</p>
+
+<p>Once Remove Ads is owned, the game no longer starts the advertising software, requests no advertisements, and does not show the tracking prompt.</p>
+
+<h2>4. Your choices</h2>
+
+<ul>
+  <li><strong>Tracking.</strong> iOS asks once, after your first level, whether Sway may track you across other companies' apps and websites. Declining changes nothing in the game; the advertisements simply become less personalised. Change your answer at any time in <em>Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking</em>.</li>
+  <li><strong>Consent.</strong> If the consent form applied to you, you can reopen it and change any choice from <em>Privacy options</em> on the game's settings screen. Withdrawing consent takes effect from then on; it does not undo processing that already happened lawfully.</li>
+  <li><strong>Google's own controls.</strong> Google lets you see and manage the advertising data it holds at <a href="https://myadcenter.google.com">My Ad Center</a>, whether or not you use a Google account.</li>
+  <li><strong>Remove Ads.</strong> Buying it turns the advertising off entirely, as described above.</li>
+  <li><strong>Deleting the app</strong> deletes everything the game itself keeps.</li>
+</ul>
+
+<h2>5. Children</h2>
+
+<p>Sway is not directed at children. We do not knowingly collect personal data from anyone under 13, or under the age of digital consent where they live if that is higher &mdash; in Greece, 15. Advertisements are requested with a content rating suitable for general audiences. If you believe a child has provided personal data through the app, write to us and we will help remove it.</p>
+
+<h2>6. How long data is kept, and how to delete it</h2>
+
+<table>
+  <tr><th>Kept by the game</th><td>On your device, until you delete the app.</td></tr>
+  <tr><th>Kept by Google</th><td>According to <a href="https://policies.google.com/technologies/retention">Google's retention practices</a>. You can turn off tracking in iOS Settings, withdraw consent in the game, and delete or manage advertising data in <a href="https://myadcenter.google.com">My Ad Center</a>.</td></tr>
+  <tr><th>Kept by Apple</th><td>Purchase records, under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</td></tr>
+  <tr><th>Kept by us</th><td>Nothing, unless you write to us &mdash; then your message, for as long as it takes to answer you.</td></tr>
+</table>
+
+<p>To ask for deletion of anything, or for help doing it, write to <a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a>. We answer within one month.</p>
+
+<h2>7. Your rights</h2>
+
+<p>Under the GDPR, and similar laws elsewhere, you have the right to ask for access to your personal data, to have it corrected or erased, to restrict or object to its processing, and to receive it in a portable form; and, where processing rests on consent, to withdraw that consent at any time. Because the game holds none of your personal data, a request to us is usually answered by pointing you to the right control at Google or Apple, or by helping you use it &mdash; but write to us anyway if anything is unclear, and we will help.</p>
+
+<p>You also have the right to lodge a complaint with a supervisory authority. In Greece that is the <a href="https://www.dpa.gr">Hellenic Data Protection Authority</a>; you may also complain to the authority where you live.</p>
+
+<p>We make no decisions about you by automated means that have legal or similarly significant effects. The personalisation of advertisements, where you have consented to it, is done by Google as described above.</p>
+
+<h2>8. Security</h2>
+
+<p>What the game keeps stays inside the app's own storage, protected by iOS. Everything exchanged with Google and Apple travels encrypted.</p>
+
+<h2>9. This website</h2>
+
+<p>This site is a few static pages hosted on GitHub Pages. It sets no cookies and runs no analytics. As with any web host, GitHub sees the IP address of visitors for security and operational purposes, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+<h2>10. Changes</h2>
+
+<p>If this policy changes, the date at the top changes with it, and a change that matters to you is mentioned in the app's release notes.</p>
 
 <h2>Contact</h2>
 
-<p><a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a></p>
+<p>Eirini Basiaka &middot; Komninis Annis 4, 42100 Trikala, Greece<br>
+<a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a></p>
 
 <footer>
   <a href="./">Sway</a>

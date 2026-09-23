@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fit</title>
+<meta name="description" content="A block puzzle played in levels. Support and privacy.">
+<style>
+  :root { --ink: #23201d; --quiet: #6b645d; --cloth: #f4efe8; --line: #e0d8cd; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ink: #ece6de; --quiet: #a09890; --cloth: #1b1917; --line: #322e2a; }
+  }
+  :root[data-theme="dark"] { --ink: #ece6de; --quiet: #a09890; --cloth: #1b1917; --line: #322e2a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 16px; min-height: 100vh; background: var(--cloth); color: var(--ink);
+    font: 18px/1.6 ui-serif, Georgia, "Times New Roman", serif;
+    display: grid; place-items: center;
+  }
+  main { max-width: 34rem; text-align: center; }
+  h1 { font-size: clamp(2.6rem, 12vw, 4rem); margin: 0; letter-spacing: -.02em; }
+  .tag { font-size: 1.15rem; margin: .4em 0 2.5em; }
+  .tag em { font-style: italic; }
+  p.body { text-align: left; color: var(--quiet); }
+  footer { margin-top: 3em; padding-top: 1.25em; border-top: 1px solid var(--line); color: var(--quiet); font-size: .9rem; }
+  a { color: inherit; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Fit</h1>
+  <p class="tag">Place the hand <em>you were dealt</em>.</p>
+
+  <p class="body">A block puzzle for iPhone, played in levels. Each hand deals
+  three pieces and you place them in the order they came; clear every marked
+  cell before the hands run out.</p>
+
+  <p class="body"><strong>Support.</strong> A question, a bug, or a purchase
+  that did not restore? Write to
+  <a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a>
+  and say which iPhone and which level. Purchases are restored from Settings,
+  "Restore purchases". Your progress stays on your iPhone; there is no account.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a> &middot;
+    <a href="mailto:eirinibasiaka.dev@gmail.com">Contact</a><br>
+    &copy; 2026 Eirini Basiaka
+  </footer>
+
+</main>
+</body>
+</html>

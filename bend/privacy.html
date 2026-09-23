@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+  Bend's privacy policy, as one static page: no script, no tracker, no external asset, no
+  font and no image fetched from anywhere. A privacy policy that loads a third party is a
+  privacy policy that contradicts itself.
+
+  Apple 5.1.1 requires this page and a link to it from inside the app and from the App Store
+  listing. The in-app link is the "Privacy policy" pill on the settings card, which opens the
+  one constant Bend.Game.PrivacyPolicy.Url; this file is what belongs at that address.
+  Publishing it there is the lead's step (D10 of docs/decisions-2026-09-23.md): the public
+  repository eirinibasiaka/eirinibasiaka.github.io holds it at bend/privacy.html, and nothing
+  else from this repository goes there.
+
+  Every claim below is a thing in the tree, not a thing a document says:
+    - progress on the phone            Bend.Game.SaveStore (Application.persistentDataPath)
+    - no account, no analytics of ours unity/Assets/Plugins/iOS/PrivacyInfo.xcprivacy
+    - ads only at the stuck card       docs/design/05-monetisation.md, ADS-D1 and ADS-D4
+    - consent before tracking          Bend.Game.ConsentFlow, Bend.Ads.AdsConsent
+    - the two ways to change it        the settings card's two pills (card 20)
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bend — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 2rem 1.25rem 4rem; max-width: 40rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .updated { color: #6b6b6b; margin-top: 0; }
+  ul { padding-left: 1.2rem; }
+  code { font-size: 0.95em; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — Bend</h1>
+<p class="updated">Last updated 23 September 2026</p>
+
+<p>
+  Bend is a tile-link puzzle game for iPhone, published by <strong>Eirini Basiaka</strong>.
+  This page says what the app does with information, in the same words the app itself uses.
+  If anything here is unclear, write to
+  <a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a>.
+</p>
+
+<h2>There is no account</h2>
+<p>
+  Bend has no sign-in, no profile and no server of ours. Nothing you do in the game is sent
+  to us, and we do not run analytics of our own. We never see your name, your email address
+  or your device.
+</p>
+
+<h2>Your progress stays on your phone</h2>
+<p>
+  The level you have reached, the board you left, your sound and haptics switches and whether
+  you have bought <em>Remove ads</em> are written to the app's own storage on the device.
+  Deleting the app deletes them. They are not backed up to us and they are not shared.
+</p>
+
+<h2>Advertising</h2>
+<p>
+  Bend shows <strong>one kind of ad and one only</strong>: an optional rewarded video, offered
+  at a single moment — when a board has no matching pair left and you may take a shuffle. You
+  can always decline it, and there is always a way on without it. There are no banners, no
+  interstitials, no app-open ads and no offerwalls.
+</p>
+<p>
+  Those videos come from <strong>Google AdMob</strong> (the Google Mobile Ads SDK). When an ad
+  is requested or watched, Google may collect and use information from your device — device
+  and advertising identifiers, usage data and diagnostics — for advertising, for measuring
+  ads and for detecting fraud. That processing is Google's, under Google's own terms:
+</p>
+<ul>
+  <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a></li>
+  <li><a href="https://support.google.com/admob/answer/9012903">AdMob's own description of the data it collects</a></li>
+</ul>
+<p>
+  The app declares its own data use in the privacy manifest shipped inside it
+  (<code>PrivacyInfo.xcprivacy</code>): Bend's own code collects nothing and tracks nothing.
+  The Google Mobile Ads SDK ships its own manifest beside it, and the App Store listing's
+  privacy labels follow it.
+</p>
+
+<h2>Consent, and tracking</h2>
+<p>
+  Nothing is asked at first launch. After you have finished the first level and its card has
+  gone, Bend asks in this order:
+</p>
+<ul>
+  <li>
+    <strong>A consent message</strong>, where the law where you are requires one (the EEA, the
+    UK and Switzerland). It is shown through Google's User Messaging Platform and it decides
+    whether ads may be requested at all, and whether they may be personalised. If you refuse,
+    the ad SDK is not started in that session.
+  </li>
+  <li>
+    <strong>The iOS tracking permission</strong> (App Tracking Transparency), asked once. If
+    you choose <em>Ask App Not to Track</em>, no advertising identifier is shared for tracking
+    across other companies' apps and websites, and any ad you are shown is non-personalised.
+  </li>
+</ul>
+<p>
+  You are given nothing in the game for answering either one in any particular way. If you
+  have bought <em>Remove ads</em>, neither question is asked at all, because there is no ad
+  for you to consent to.
+</p>
+
+<h2>How to change your mind</h2>
+<ul>
+  <li>
+    In Bend, tap the gear, then <strong>Ad privacy options</strong> to reopen the consent
+    message and change your answer. That pill appears wherever there is a consent message to
+    reopen.
+  </li>
+  <li>
+    For tracking, use <em>Settings › Privacy &amp; Security › Tracking</em> on your iPhone.
+  </li>
+  <li>
+    <strong>Privacy policy</strong>, in the same place in the app, opens this page.
+  </li>
+</ul>
+
+<h2>Purchases</h2>
+<p>
+  Bend sells one thing: <em>Remove ads</em>, a single non-consumable purchase that makes the
+  one rewarded shuffle of each attempt come without a video. It is bought and restored through
+  Apple's App Store. We never see or store a card number; the transaction is Apple's, and
+  Apple's privacy policy covers it.
+</p>
+
+<h2>Children</h2>
+<p>
+  Bend is rated <strong>12+</strong> and is not part of the App Store's Kids Category. It is
+  not directed at children under the age of digital consent, and it is not knowingly used to
+  collect information from them. If you believe a child has provided information through the
+  app, write to the address below and it will be dealt with.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+  If what the app does changes, this page changes with it and the date at the top moves. The
+  previous wording stays in the app's repository history.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Eirini Basiaka —
+  <a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a>
+</p>
+
+</body>
+</html>

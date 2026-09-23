@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+  Bend's support page, as one static file: no script, no tracker, no external asset, no font
+  and no image fetched from anywhere. It is the sibling of privacy.html and follows its shape
+  deliberately, so the two read as one site.
+
+  App Store Connect requires a Support URL on the version page. This file is what belongs at
+  that address:
+
+      https://eirinibasiaka.github.io/bend/support.html
+
+  Publishing it there is the lead's step (D10 of docs/decisions-2026-09-23.md): the public
+  repository eirinibasiaka/eirinibasiaka.github.io holds index.html, bend/privacy.html,
+  bend/support.html and app-ads.txt, and nothing else from this repository goes there. The URL
+  does not resolve until that has happened, and Apple checks it.
+
+  Every answer below is a thing in the tree, not a thing a document says:
+    - the one ad moment and its cap     docs/design/05-monetisation.md, ADS-D1
+    - the free shuffle, then one offer  GameViewModel.ShufflesPerAttempt = 2
+    - restore purchases                 the settings card's pill (card 20)
+    - ad privacy options                Bend.Ads.AdsConsent, the settings card's pill
+    - progress on the phone             Bend.Game.SaveStore (Application.persistentDataPath)
+    - every board clears                docs/brief.md R6; tests/test_levels.py
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bend — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 2rem 1.25rem 4rem; max-width: 40rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .updated { color: #6b6b6b; margin-top: 0; }
+  ul { padding-left: 1.2rem; }
+  code { font-size: 0.95em; }
+</style>
+</head>
+<body>
+
+<h1>Support — Bend</h1>
+<p class="updated">Last updated 23 September 2026</p>
+
+<p>
+  Bend is a tile-link puzzle for iPhone, made by <strong>Eirini Basiaka</strong>. If your question
+  is not answered here, write to
+  <a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a> and say which iPhone
+  and which version of iOS you are on. It is one person reading, so a reply takes a day or two.
+</p>
+
+<h2>How the game works</h2>
+<p>
+  Tap two tiles of the same kind. They clear if a path of at most three straight segments joins them
+  through empty cells. The path is allowed to leave the board and come back around the outside, so
+  two tiles on opposite edges are often connectable when they do not look it.
+</p>
+<p>
+  After every pair the remaining tiles fall. From level 8 the direction the tiles fall keeps
+  turning — down, left, up, right — every third match at first, more often as the levels go on. The
+  compass above the board shows the current direction, and the board's frame glows on the side the
+  tiles fall toward. One match before it turns, that edge pulses and the compass wobbles toward
+  where it is going.
+</p>
+<p>
+  There is no timer. Three hints per level are free.
+</p>
+
+<h2>The board has no moves left</h2>
+<p>
+  That is a real state of the game, not a bug, and it is reachable by playing badly rather than by
+  being given an impossible board: every level is solved by a program before it ships, so each board
+  you are given can be cleared.
+</p>
+<p>
+  When it happens, a card slides up:
+</p>
+<ul>
+  <li><strong>The first shuffle of every attempt is free.</strong> No video, no question.</li>
+  <li>
+    After that, exactly <strong>one</strong> more shuffle is offered, as an optional video. You can
+    always decline it. If no video is ready, the shuffle is given anyway and the same one offer is
+    spent.
+  </li>
+  <li>
+    After that, the card offers <strong>Restart level</strong> and nothing else. There is nothing to
+    buy to keep playing.
+  </li>
+</ul>
+<p>
+  Restarting is a new attempt, so both shuffles come back.
+</p>
+
+<h2>Ads</h2>
+<p>
+  There is one kind of ad in Bend and one only: the optional rewarded video above. There are no
+  banners, no interstitials, no app-open ads and no offerwalls. The video is never required to
+  finish a level.
+</p>
+
+<h2>Remove ads, and how to restore it</h2>
+<p>
+  <em>Remove ads</em> is a single purchase that makes that one rewarded shuffle come without a
+  video. It does not buy extra shuffles and it does not change a board.
+</p>
+<p>
+  If you have bought it before — on this phone or another one signed in to the same Apple Account —
+  get it back either way:
+</p>
+<ul>
+  <li>
+    In Bend, tap the gear, then <strong>Restore purchases</strong>. It finishes in a few seconds and
+    the ad offer stops appearing.
+  </li>
+  <li>
+    If that does not find it, check you are signed in to the Apple Account that made the purchase:
+    <em>Settings › [your name] › Media &amp; Purchases</em>. Then try again.
+  </li>
+</ul>
+<p>
+  Purchases are Apple's. Refunds are Apple's too: use
+  <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We cannot issue one, and
+  we never see your payment details.
+</p>
+
+<h2>Changing your ad privacy choices</h2>
+<ul>
+  <li>
+    In Bend, tap the gear, then <strong>Ad privacy options</strong>. That reopens the consent
+    message and lets you change your answer. The pill appears wherever there is a consent message to
+    reopen — where you are, the law may not require one.
+  </li>
+  <li>
+    For tracking, use <em>Settings › Privacy &amp; Security › Tracking</em> on your iPhone.
+  </li>
+  <li>
+    <strong>Privacy policy</strong>, in the same place in the app, opens
+    <a href="privacy.html">the privacy page</a>.
+  </li>
+</ul>
+
+<h2>Your progress</h2>
+<p>
+  The level you have reached, the board you left in the middle, your sound and haptics switches and
+  whether you have bought <em>Remove ads</em> are written to the app's own storage on the phone.
+  There is no account and no cloud save, so <strong>deleting the app deletes your progress</strong>,
+  and it does not move to a new phone on its own. <em>Remove ads</em> does come back, through
+  Restore purchases.
+</p>
+
+<h2>Sound and haptics</h2>
+<p>
+  Both have their own switch behind the gear and both remember what you set. If the game is silent
+  when it should not be, check the switch first, then the iPhone's ring/silent switch and its
+  volume.
+</p>
+
+<h2>Accessibility</h2>
+<p>
+  Every tile kind is a shape as well as a colour, so the board can be told apart without colour
+  vision. If something is unreadable or unreachable for you, that is worth an email — say what you
+  use and what happened.
+</p>
+
+<h2>Something is wrong</h2>
+<p>
+  Write to <a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a> with:
+</p>
+<ul>
+  <li>the iPhone model and the iOS version;</li>
+  <li>the level number, if it is a particular board;</li>
+  <li>what you did, what happened, and what you expected instead.</li>
+</ul>
+<p>
+  A board you believe cannot be cleared is worth reporting with its level number: every board is
+  proved solvable before it ships, so a real counter-example would be a bug worth fixing.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Eirini Basiaka —
+  <a href="mailto:eirinibasiaka.dev@gmail.com">eirinibasiaka.dev@gmail.com</a>
+  <br>
+  <a href="privacy.html">Privacy policy</a>
+</p>
+
+</body>
+</html>

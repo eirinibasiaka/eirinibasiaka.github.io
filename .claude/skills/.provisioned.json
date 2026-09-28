@@ -1,0 +1,16 @@
+{
+  "source_commit": "a8dcdfc",
+  "provisioned_at": "2026-09-28",
+  "skills": {},
+  "components": [
+    "knowledge"
+  ],
+  "code_intelligence": [],
+  "hooks": {},
+  "knowledge_block": "v1",
+  "knowledge_profile": "default",
+  "knowledge_bundles": [
+    "ios-release"
+  ],
+  "knowledge_wiki": "/Users/vadion/Code/wiki"
+}

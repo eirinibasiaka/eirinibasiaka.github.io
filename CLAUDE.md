@@ -30,12 +30,13 @@ one commit prefixed with the game (`pour: privacy policy for …`).
 - Lessons about the store pages belong to the game repository that learned
   them (its inbox), not here.
 
-<!-- knowledge:begin v1 -->
+<!-- knowledge:begin v2 -->
 ## Knowledge
 
-Read before planning; open `index.md` first, then only the pages you need.
-For anything not listed, start at the hub `/Users/vadion/Code/wiki/index.md` (one line per bundle).
-- /Users/vadion/Code/wiki/ios-release/index.md — the privacy and support pages published here are what App Store Connect links to; the rules they follow
+When the moment on a line comes, open its path first: a shelf's `index.md`
+(then only the pages you need), the research map, or this repo's own research.
+Anything else starts at the hub `/Users/vadion/Code/wiki/index.md` (one line per bundle).
+- Before you change a privacy or support page App Store Connect links to → /Users/vadion/Code/wiki/development/ios/release/index.md
 
 Never edit these from here. They are read-only to this repo.
 
@@ -49,11 +50,18 @@ repo you are running in**, not here if you run from elsewhere, and commit it:
     type: report
     status: draft
     title: <one falsifiable sentence>
+    description: <what it answers, in one line; not the title again>
     about_repo: <repo the lesson concerns>
     source: { repo: <cwd repo>, sha: <HEAD>, run: <run id or "interactive"> }
-    bundle: <a bundle the hub lists: games | ios-release | …>
+    shelf: <a shelf the wiki declares: development/games/zelda-like/combat | agentic/harness | …>
+    sources:
+      - { id: <short-id>, resource: "<URL, or repo:path@sha>" }
     ---
-    Evidence, then "Apply:" — what the next agent should do differently.
+    Evidence, each claim with its source as a footnote [^<short-id>], then
+    "Apply:" (what the next agent should do differently) and "Not known:"
+    (what it leaves open).
+
+    [^<short-id>]: <the source's title>
 
 Product-only facts stay in this repo's docs. Do not copy wiki pages into this repo.
 <!-- knowledge:end -->
